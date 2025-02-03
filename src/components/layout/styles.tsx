@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { COLORS } from "../../consts";
 
 export const Container = styled.div`
-  background-color: black;
+  background-color: ${COLORS.CHINESE_BLACK};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,6 +17,4 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   width: 390px;
   height: 844px;
-  background-color: white;
-  border-radius: 20px;
 `;
