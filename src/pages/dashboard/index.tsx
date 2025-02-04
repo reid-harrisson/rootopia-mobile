@@ -1,13 +1,14 @@
-import { Container, Header, ScrollArea } from "./styles";
+import { Container, Footer, ScrollArea, Header, Link } from "./styles";
 import { UserSection } from "./user";
 import { LeaderSection } from "./leader";
 import { RaceSection } from "./race";
 import { RuleSection } from "./rule";
 import { HightlightSection } from "./highlight";
 import { User, Users, Gamepad2, Scale, HeartHandshake } from "lucide-react";
-import { COLORS } from "../../consts";
+import { COLORS, PATH } from "../../consts";
 import { IconButton } from "../../components";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const DashboardPage = () => {
   const userRef = useRef<HTMLDivElement | null>(null);
@@ -15,10 +16,14 @@ export const DashboardPage = () => {
   const raceRef = useRef<HTMLDivElement | null>(null);
   const ruleRef = useRef<HTMLDivElement | null>(null);
   const highlightRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();
 
   return (
     <Container>
       <Header>
+        <Link onClick={() => navigate(PATH.HOME)}>LOOTOPIA</Link>
+      </Header>
+      <Footer>
         <IconButton
           onClick={() =>
             userRef.current?.scrollIntoView({
@@ -69,7 +74,7 @@ export const DashboardPage = () => {
         >
           <HeartHandshake color={COLORS.BRIGHT_TURQUOISE} size={30} />
         </IconButton>
-      </Header>
+      </Footer>
       <ScrollArea>
         <UserSection ref={userRef} />
         <LeaderSection ref={leaderRef} />
