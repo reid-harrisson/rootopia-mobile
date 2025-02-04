@@ -1,27 +1,28 @@
-import { Container, Image, Group } from "./styles";
-import LogoImage from "../../assets/logo.jpg";
+import { Container, Group } from "./styles";
 import { IconButton } from "../../components";
 import { User, Users, Gamepad2, Scale, HeartHandshake } from "lucide-react";
-import { COLORS } from "../../consts";
+import { COLORS, PATH } from "../../consts";
+import { useNavigate } from "react-router-dom";
 
 export const HomePage = () => {
+  const naviate = useNavigate();
+
   return (
     <Container>
-      <Image src={LogoImage} />
       <Group>
-        <IconButton>
+        <IconButton onClick={() => naviate(PATH.DASHBORD)}>
           <User color={COLORS.RAJAH} />
         </IconButton>
-        <IconButton>
+        <IconButton onClick={() => naviate(PATH.DASHBORD)}>
           <Users color={COLORS.BRIGHT_TURQUOISE} />
         </IconButton>
-        <IconButton>
+        <IconButton onClick={() => naviate(PATH.DASHBORD)}>
           <Gamepad2 color={COLORS.KELLY_GREEN} />
         </IconButton>
-        <IconButton>
-          <Scale color={COLORS.CHINESE_WHITE} />
+        <IconButton onClick={() => naviate(PATH.DASHBORD)}>
+          <Scale color={COLORS.JET_STREAM} />
         </IconButton>
-        <IconButton>
+        <IconButton onClick={() => naviate(PATH.DASHBORD)}>
           <HeartHandshake color={COLORS.BRIGHT_TURQUOISE} />
         </IconButton>
       </Group>
