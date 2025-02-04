@@ -13,28 +13,40 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-color: ${COLORS.ONYX};
-  gap: 20px;
   position: relative;
 `;
 
 export const Heading = styled.h1`
   text-align: center;
   font-size: 24px;
-  padding: 20px;
-  margin: 60px 0px;
   color: ${COLORS.JET_STREAM};
-  text-shadow: 0px 3px 3px ${COLORS.CHINESE_BLACK};
-`;
-
-export const Image = styled.img`
-  width: 100%;
+  text-shadow: 0px 3px 3px ${COLORS.CHINESE_BLACK}A0;
 `;
 
 export const Group = styled.div`
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  gap: 10px;
-  background: ${COLORS.CHINESE_BLACK}A0;
-  padding: 40px 40px 20px 40px;
-  border-radius: 50% 50% 0 0;
+  width: 100%;
+  height: 30%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Link = styled.button`
+  border: none;
+  padding: none;
+  background: transparent;
+  color: ${COLORS.RAJAH};
+  text-shadow: 0px 3px 3px ${COLORS.CHINESE_BLACK}A0;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 `;
