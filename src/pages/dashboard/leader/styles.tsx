@@ -64,6 +64,9 @@ export const Label = styled.p`
   font-weight: 700;
   color: ${COLORS.RAJAH};
   text-shadow: 0px 2px 3px ${COLORS.CHINESE_BLACK}A0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 `;
 
 export const Text = styled.p`
