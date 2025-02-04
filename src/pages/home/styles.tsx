@@ -18,8 +18,8 @@ export const Container = styled.div`
 
 export const Heading = styled.h1`
   text-align: center;
-  font-size: 24px;
-  color: ${COLORS.JET_STREAM};
+  font-size: 22px;
+  color: ${COLORS.WHITE};
   text-shadow: 0px 3px 3px ${COLORS.CHINESE_BLACK}A0;
 `;
 
@@ -36,7 +36,7 @@ export const Link = styled.button`
   border: none;
   padding: none;
   background: transparent;
-  color: ${COLORS.RAJAH};
+  color: ${COLORS.WHITE};
   text-shadow: 0px 3px 3px ${COLORS.CHINESE_BLACK}A0;
   cursor: pointer;
   font-size: 24px;

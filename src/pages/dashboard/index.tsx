@@ -21,7 +21,7 @@ export const DashboardPage = () => {
   return (
     <Container>
       <Header>
-        <Link onClick={() => navigate(PATH.HOME)}>LOOTOPIA</Link>
+        <Link onClick={() => navigate(PATH.HOME)}>ROOTOPIA</Link>
       </Header>
       <Footer>
         <IconButton

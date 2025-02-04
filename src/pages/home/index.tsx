@@ -9,8 +9,8 @@ export const HomePage = () => {
     <Container>
       <Group>
         <Heading>
-          Compete in the world's biggest referral race & win from the Million
-          Pool!
+          COMPETE IN THE WORLD'S BIGGEST REFERRAL RACE & WIN FROM THE MILLION
+          POOL!
         </Heading>
       </Group>
       <Group>

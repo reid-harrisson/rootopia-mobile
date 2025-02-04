@@ -6,3 +6,4 @@ export const CHINESE_BLACK = "#0D0E1D";
 export const JET_STREAM = "#BACFCA";
 export const DARK_JUNGLE_GREEN = "#181A29";
 export const OLD_SILVER = "#858585";
+export const WHITE = "#FAFAFA";

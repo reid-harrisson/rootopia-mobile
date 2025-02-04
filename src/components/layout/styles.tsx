@@ -33,7 +33,7 @@ export const Link = styled.button`
   border: none;
   padding: none;
   background: transparent;
-  color: ${COLORS.RAJAH};
+  color: ${COLORS.JET_STREAM};
   text-shadow: 0px 3px 3px ${COLORS.CHINESE_BLACK}A0;
   cursor: pointer;
   font-size: 20px;
