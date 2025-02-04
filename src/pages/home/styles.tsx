@@ -7,16 +7,23 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   background-image: url(${LogoImage});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: ${COLORS.ONYX};
-  box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.2);
   gap: 20px;
   position: relative;
+`;
+
+export const Heading = styled.h1`
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+  margin: 60px 0px;
+  color: ${COLORS.JET_STREAM};
+  text-shadow: 0px 3px 3px ${COLORS.CHINESE_BLACK};
 `;
 
 export const Image = styled.img`
@@ -24,10 +31,10 @@ export const Image = styled.img`
 `;
 
 export const Group = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   gap: 10px;
   background: ${COLORS.CHINESE_BLACK}A0;
-  padding: 10px 20px;
-  border-radius: 50px;
-  margin-top: calc(100% + 50px);
+  padding: 40px 40px 20px 40px;
+  border-radius: 50% 50% 0 0;
 `;

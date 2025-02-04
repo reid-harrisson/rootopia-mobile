@@ -1,4 +1,4 @@
-import { Container, Group } from "./styles";
+import { Container, Group, Heading } from "./styles";
 import { IconButton } from "../../components";
 import { User, Users, Gamepad2, Scale, HeartHandshake } from "lucide-react";
 import { COLORS, PATH } from "../../consts";
@@ -9,6 +9,10 @@ export const HomePage = () => {
 
   return (
     <Container>
+      <Heading>
+        Compete in the world's biggest referral race & win from the Million
+        Pool!
+      </Heading>
       <Group>
         <IconButton onClick={() => naviate(PATH.DASHBORD)}>
           <User color={COLORS.RAJAH} />

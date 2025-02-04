@@ -1,45 +1,81 @@
-import { Container, Header, ScrollArea, Group } from "./styles";
+import { Container, Header, ScrollArea } from "./styles";
 import { UserSection } from "./user";
 import { LeaderSection } from "./leader";
 import { RaceSection } from "./race";
 import { RuleSection } from "./rule";
 import { HightlightSection } from "./highlight";
-import { IconButton } from "../../components";
 import { User, Users, Gamepad2, Scale, HeartHandshake } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import { COLORS, PATH } from "../../consts";
+import { COLORS } from "../../consts";
+import { IconButton } from "../../components";
+import { useRef } from "react";
 
 export const DashboardPage = () => {
-  const navigate = useNavigate();
+  const userRef = useRef<HTMLDivElement | null>(null);
+  const leaderRef = useRef<HTMLDivElement | null>(null);
+  const raceRef = useRef<HTMLDivElement | null>(null);
+  const ruleRef = useRef<HTMLDivElement | null>(null);
+  const highlightRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <Container>
       <Header>
-        <IconButton onClick={() => navigate(PATH.HOME)}>ROOTOPIA</IconButton>
-        <Group>
-          <IconButton onClick={() => navigate(PATH.DASHBORD)}>
-            <User color={COLORS.CHINESE_BLACK + "A0"} />
-          </IconButton>
-          <IconButton onClick={() => navigate(PATH.DASHBORD)}>
-            <Users color={COLORS.CHINESE_BLACK + "A0"} />
-          </IconButton>
-          <IconButton onClick={() => navigate(PATH.DASHBORD)}>
-            <Gamepad2 color={COLORS.CHINESE_BLACK + "A0"} />
-          </IconButton>
-          <IconButton onClick={() => navigate(PATH.DASHBORD)}>
-            <Scale color={COLORS.CHINESE_BLACK + "A0"} />
-          </IconButton>
-          <IconButton onClick={() => navigate(PATH.DASHBORD)}>
-            <HeartHandshake color={COLORS.CHINESE_BLACK + "A0"} />
-          </IconButton>
-        </Group>
+        <IconButton
+          onClick={() =>
+            userRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <User color={COLORS.RAJAH} size={30} />
+        </IconButton>
+        <IconButton
+          onClick={() =>
+            leaderRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <Users color={COLORS.BRIGHT_TURQUOISE} size={30} />
+        </IconButton>
+        <IconButton
+          onClick={() =>
+            raceRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <Gamepad2 color={COLORS.KELLY_GREEN} size={30} />
+        </IconButton>
+        <IconButton
+          onClick={() =>
+            ruleRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <Scale color={COLORS.JET_STREAM} size={30} />
+        </IconButton>
+        <IconButton
+          onClick={() =>
+            highlightRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
+          <HeartHandshake color={COLORS.BRIGHT_TURQUOISE} size={30} />
+        </IconButton>
       </Header>
       <ScrollArea>
-        <UserSection />
-        <LeaderSection />
-        <RaceSection />
-        <RuleSection />
-        <HightlightSection />
+        <UserSection ref={userRef} />
+        <LeaderSection ref={leaderRef} />
+        <RaceSection ref={raceRef} />
+        <RuleSection ref={ruleRef} />
+        <HightlightSection ref={highlightRef} />
       </ScrollArea>
     </Container>
   );
